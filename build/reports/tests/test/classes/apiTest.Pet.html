@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">4</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">4.131s</div>
+<div class="counter">7.158s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,23 @@
 </tr>
 </thead>
 <tr>
+<td class="success">alterarPet</td>
+<td class="success">0.915s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">consultarPet</td>
-<td class="success">4.131s</td>
+<td class="success">0.956s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deletarPet</td>
+<td class="success">0.930s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">incluirPet</td>
+<td class="success">4.357s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +102,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Request method:	GET
-Request URI:	https://petstore.swagger.io/v2/pet/1008
+<pre>Request method:	POST
+Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			&lt;none&gt;
 Request params:	&lt;none&gt;
 Query params:	&lt;none&gt;
@@ -98,9 +113,31 @@ Headers:		Accept=*/*
 				Content-Type=application/json; charset=UTF-8
 Cookies:		&lt;none&gt;
 Multiparts:		&lt;none&gt;
-Body:			&lt;none&gt;
+Body:
+{
+    &quot;id&quot;: 1008,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;dog&quot;
+    },
+    &quot;name&quot;: &quot;Snoopas&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;animal vermifugado na primeira semana&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;vacinado na segunda semana&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+}
 HTTP/1.1 200 OK
-Date: Fri, 20 Jan 2023 16:20:27 GMT
+Date: Tue, 24 Jan 2023 00:45:47 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -121,11 +158,152 @@ Server: Jetty(9.2.9.v20150224)
     ],
     &quot;tags&quot;: [
         {
-            &quot;id&quot;: 0,
-            &quot;name&quot;: &quot;vermifugado ok&quot;
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;animal vermifugado na primeira semana&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;vacinado na segunda semana&quot;
         }
     ],
     &quot;status&quot;: &quot;available&quot;
+}
+Request method:	GET
+Request URI:	https://petstore.swagger.io/v2/pet/1008
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Date: Tue, 24 Jan 2023 00:45:49 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;id&quot;: 1008,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;dog&quot;
+    },
+    &quot;name&quot;: &quot;Snoopas&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;animal vermifugado na primeira semana&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;vacinado na segunda semana&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+}
+Request method:	PUT
+Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;id&quot;: 1008,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;dog&quot;
+    },
+    &quot;name&quot;: &quot;Snoopas&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;animal vermifugado na primeira semana&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;vacinado na segunda semana&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;sold&quot;
+}
+HTTP/1.1 200 OK
+Date: Tue, 24 Jan 2023 00:45:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;id&quot;: 1008,
+    &quot;category&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;dog&quot;
+    },
+    &quot;name&quot;: &quot;Snoopas&quot;,
+    &quot;photoUrls&quot;: [
+        &quot;string&quot;
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;id&quot;: 3,
+            &quot;name&quot;: &quot;animal vermifugado na primeira semana&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;name&quot;: &quot;vacinado na segunda semana&quot;
+        }
+    ],
+    &quot;status&quot;: &quot;sold&quot;
+}
+Request method:	DELETE
+Request URI:	https://petstore.swagger.io/v2/pet/1008
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Date: Tue, 24 Jan 2023 00:45:51 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    &quot;code&quot;: 200,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;1008&quot;
 }
 </pre>
 </span>
@@ -138,7 +316,7 @@ Server: Jetty(9.2.9.v20150224)
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 20/01/2023 13:20:28</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 23/01/2023 21:45:48</p>
 </div>
 </div>
 </body>
