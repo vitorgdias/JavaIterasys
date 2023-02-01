@@ -35,9 +35,9 @@ public class seleniumSimples {
 
         assertEquals(driver.findElement(By.cssSelector("span.item-price__current")).getText(),"R$ 19.90");
         assertEquals(driver.findElement(By.cssSelector("info")).getText(),"Ragnarök - Pacote de 11.000 ROPS");
-        //driver.findElement(By.cssSelector("a.next")).click();
+        driver.findElement(By.cssSelector("a.next")).click();
 
 
-        //driver.quit(); //Encerra o objeto do Selenium
+        driver.quit(); //Encerra o objeto do Selenium
     }
 }
