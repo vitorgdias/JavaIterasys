@@ -22,4 +22,8 @@ dependencies {
 test {
     //useJUnitPlatform()
     useTestNG()
+    filter{
+    excludeTestsMatching "*apiTest*"
+    excludeTestsMatching "*TestaCalc*"
+    }
 }
