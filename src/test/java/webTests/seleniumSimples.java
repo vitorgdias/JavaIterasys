@@ -20,10 +20,10 @@ public class seleniumSimples {
     @BeforeMethod //Se utilizar Test ao invés de Method, o programa reutiliza a mesma janela já aberta.
     public void iniciar(){
         // A - Início
-        System.setProperty("webdriver.chrome.driver","drivers/chrome/109/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","drivers/chrome/112/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().setSize(new Dimension(1768, 992));
-        driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(600, TimeUnit.MILLISECONDS);
     }
     @AfterMethod
     public void finalizar(){
@@ -34,10 +34,10 @@ public class seleniumSimples {
     public void consultarRO(){
         // B - Realizar o teste
         driver.get("https://hype.games/br"); //Abre o site que foi informado
-        driver.findElement(By.id("search-input")).click();                        //Clica no campo de pesquisa
-        driver.findElement(By.id("search-input")).clear();                        //Limpa o campo
-        driver.findElement(By.id("search-input")).sendKeys("ragnarok");//Escreve "ragnarok" no campo
-        driver.findElement(By.id("global-search__btn")).click();
+        driver.findElement(By.id("searchContainerSection")).click();                        //Clica no campo de pesquisa
+        driver.findElement(By.id("searchContainerSection")).clear();                        //Limpa o campo
+        driver.findElement(By.id("searchContainerSection")).sendKeys("ragnarok");//Escreve "ragnarok" no campo
+        driver.findElement(By.id("submit")).click();
         driver.findElement(By.cssSelector("div.w-100.cart")).click();
 
         //assertEquals(driver.findElement(By.cssSelector("span.item-price__current")).getText(),"R$ 19.90");
