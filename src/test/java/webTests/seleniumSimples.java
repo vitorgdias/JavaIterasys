@@ -23,36 +23,40 @@ public class seleniumSimples {
         System.setProperty("webdriver.chrome.driver","drivers/chrome/112/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().setSize(new Dimension(1768, 992));
-        driver.manage().timeouts().implicitlyWait(600, TimeUnit.MILLISECONDS);
+        driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
     }
-    @AfterMethod
-    public void finalizar(){
+    //@AfterMethod
+    //public void finalizar(){
         // C - Encerrar o processo
-        driver.quit(); //Encerra o objeto do Selenium
-    }
+        //driver.quit(); //Encerra o objeto do Selenium
+    //}
     @Test(priority = 1)
-    public void consultarRO(){
+    public void consultarPython(){
         // B - Realizar o teste
-        driver.get("https://hype.games/br"); //Abre o site que foi informado
-        driver.findElement(By.id("searchContainerSection")).click();                        //Clica no campo de pesquisa
-        driver.findElement(By.id("searchContainerSection")).clear();                        //Limpa o campo
-        driver.findElement(By.id("searchContainerSection")).sendKeys("ragnarok");//Escreve "ragnarok" no campo
-        driver.findElement(By.id("submit")).click();
-        driver.findElement(By.cssSelector("div.w-100.cart")).click();
+        driver.get("https://iterasys.com.br/pt"); //Abre o site que foi informado
+        driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
+        driver.findElement(By.id("16237702146520")).click(); //Clica no campo de Cursos
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).click(); // Clica no campo de pesquisa
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).clear();                        //Limpa o campo
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).sendKeys("Python"); //Escreve "Python" no campo
+        driver.manage().timeouts().implicitlyWait(600000, TimeUnit.MILLISECONDS); //Dá tempo para que a janela de cookies apareça no site
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[4]/div[3]/button[2]")).click(); // Clica no aceitar cookies
 
         //assertEquals(driver.findElement(By.cssSelector("span.item-price__current")).getText(),"R$ 19.90");
         //assertEquals(driver.findElement(By.cssSelector("info")).getText(),"Ragnarök - Pacote de 11.000 ROPS");
         //driver.findElement(By.cssSelector("a.next")).click();
     }
-    @Test(priority = 2,dependsOnMethods = {"consultarRO"})
-    public void consultarPW(){
+    @Test(priority = 2,dependsOnMethods = {"consultarPython"})
+    public void consultarJava(){
         // B - Realizar o teste
-        driver.get("https://hype.games/br");
-        driver.findElement(By.id("search-input")).click();
-        driver.findElement(By.id("search-input")).clear();
-        driver.findElement(By.id("search-input")).sendKeys("perfect world");
-        driver.findElement(By.id("global-search__btn")).click();
-        driver.findElement(By.cssSelector("div.w-100.cart")).click();
+        driver.get("https://iterasys.com.br/pt");
+        driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
+        driver.findElement(By.id("16237702146520")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).clear();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).sendKeys("Java");
+        driver.manage().timeouts().implicitlyWait(600000, TimeUnit.MILLISECONDS);
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[4]/div[3]/button[2]")).click();
 
         //assertEquals(driver.findElement(By.cssSelector("span.item-price__current")).getText(),"R$ 219.90");
         //assertEquals(driver.findElement(By.cssSelector("a.info-box.h3")).getText(),"Perfect World – Pacote de 46.200 GOLD – Melhor Oferta");
