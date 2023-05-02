@@ -22,14 +22,14 @@ public class seleniumSimples {
         // A - Início
         System.setProperty("webdriver.chrome.driver","drivers/chrome/112/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().window().setSize(new Dimension(1768, 992));
+        driver.manage().window().setSize(new Dimension(1768, 992)); //Poderia ser usado o window().maximize para deixar em tela maximizada
         driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
     }
-    //@AfterMethod
-    //public void finalizar(){
+    @AfterMethod
+    public void finalizar(){
         // C - Encerrar o processo
-        //driver.quit(); //Encerra o objeto do Selenium
-    //}
+        driver.quit(); //Encerra o objeto do Selenium
+    }
     @Test(priority = 1)
     public void consultarPython(){
         // B - Realizar o teste
@@ -39,12 +39,7 @@ public class seleniumSimples {
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).click(); // Clica no campo de pesquisa
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).clear();                        //Limpa o campo
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).sendKeys("Python"); //Escreve "Python" no campo
-        driver.manage().timeouts().implicitlyWait(600000, TimeUnit.MILLISECONDS); //Dá tempo para que a janela de cookies apareça no site
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[4]/div[3]/button[2]")).click(); // Clica no aceitar cookies
-
-        //assertEquals(driver.findElement(By.cssSelector("span.item-price__current")).getText(),"R$ 19.90");
-        //assertEquals(driver.findElement(By.cssSelector("info")).getText(),"Ragnarök - Pacote de 11.000 ROPS");
-        //driver.findElement(By.cssSelector("a.next")).click();
+        assertEquals(driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/main/a/main/div/div[2]/p")).getText(),"R$ 27,90");
     }
     @Test(priority = 2,dependsOnMethods = {"consultarPython"})
     public void consultarJava(){
@@ -54,12 +49,8 @@ public class seleniumSimples {
         driver.findElement(By.id("16237702146520")).click();
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).click();
         driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).clear();
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).sendKeys("Java");
-        driver.manage().timeouts().implicitlyWait(600000, TimeUnit.MILLISECONDS);
-        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[4]/div[3]/button[2]")).click();
-
-        //assertEquals(driver.findElement(By.cssSelector("span.item-price__current")).getText(),"R$ 219.90");
-        //assertEquals(driver.findElement(By.cssSelector("a.info-box.h3")).getText(),"Perfect World – Pacote de 46.200 GOLD – Melhor Oferta");
-        //driver.findElement(By.cssSelector("a.next")).click();
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/div/div[2]/div/div/div/input")).sendKeys("Introdução ao Java");
+        assertEquals(driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/main/a/main/div/div[2]/p")).getText(),"R$ 27,90");
     }
 }
+
