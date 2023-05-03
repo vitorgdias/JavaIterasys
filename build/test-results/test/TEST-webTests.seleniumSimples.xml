@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="webTests.seleniumSimples" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-03T01:07:50" hostname="DESKTOP-E5F9T2G" time="10.08">
+<testsuite name="webTests.seleniumSimples" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-03T18:17:31" hostname="DESKTOP-E5F9T2G" time="10.237">
   <properties/>
-  <testcase name="consultarPython" classname="webTests.seleniumSimples" time="4.01"/>
-  <testcase name="consultarJava" classname="webTests.seleniumSimples" time="3.788"/>
+  <testcase name="consultarPython" classname="webTests.seleniumSimples" time="4.148"/>
+  <testcase name="consultarJava" classname="webTests.seleniumSimples" time="3.933"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 26807
+  <system-err><![CDATA[Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 41996
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mai 02, 2023 10:07:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+mai 03, 2023 3:17:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMAÇÕES: Detected dialect: W3C
-Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 9997
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 29699
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-mai 02, 2023 10:07:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+mai 03, 2023 3:17:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMAÇÕES: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
