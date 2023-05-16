@@ -18,3 +18,9 @@ Feature: Comprar Curso CS
       | curso     | preco      |
       | "Python"  | "R$ 27,90" |
       | "ao Java" | "R$ 27,90" |
+
+    Scenario: Ver Detalhes de um curso
+      Given que acesso o site da Iterasys
+      When clico em cursos
+      And clico na imagem do curso
+      Then vejo a pagina com detalhes do curso

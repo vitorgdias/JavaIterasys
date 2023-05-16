@@ -61,6 +61,7 @@ public class comprarCursoCS {
         // Thread.sleep(900); Evitar usar isso, pois é uma pausa forçada da automação
         String textoEsperado = curso;
         WebElement h3texto = driver.findElement(By.cssSelector("h3"));
+        // wait.until(ExpectedConditions.textToBe(By.cssSelector("h3"),textoEsperado)); Espera até o elemento ter o texto desejado
         wait.until(ExpectedConditions.textToBePresentInElement(h3texto,textoEsperado));
         System.out.println("4 - Exibiu a lista de resultados da pesquisa para o curso " + curso);
     }
@@ -79,5 +80,15 @@ public class comprarCursoCS {
         assertEquals(driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div[1]/div/section/div/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div[2]/div[1]/div[1]/p")).getText(),preco);
         assertEquals(driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div[1]/div/section/div/div[1]/div/div[1]/div/div[1]/div/h1")).getText(),"Introdução ao " + curso);
         System.out.println("6 - Confirmou o nome como " + curso + " e preco do curso como " + preco);
+    }
+
+    @When("^clico na imagem do curso$")
+    public void clicoNaImagemDoCurso() {
+        driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/main/div/section/div/div/div/div/main/a[1]")).click();
+    }
+
+    @Then("^vejo a pagina com detalhes do curso$")
+    public void vejoAPaginaComDetalhesDoCurso() {
+        assertEquals(driver.getTitle(),"Início Rápido em Testes e QA | Udemy");
     }
 }
