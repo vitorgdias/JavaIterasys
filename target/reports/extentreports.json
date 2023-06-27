@@ -1,0 +1,138 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2203933600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.iniciarPO()"
+            }
+          }
+        ],
+        "line": 2,
+        "name": "Pesquisar Curso e Incluir no Carrinho PO",
+        "description": "",
+        "id": "comprar-curso-po;pesquisar-curso-e-incluir-no-carrinho-po",
+        "after": [
+          {
+            "result": {
+              "duration": 707205000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.finalizarPO()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 105965800,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "que acesso o site da Iterasys PO",
+            "match": {
+              "location": "comprarCursoPO.queAcessoOSiteDaIterasysPO()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 461300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "clico em cursos PO",
+            "match": {
+              "location": "comprarCursoPO.clicoEmCursosPO()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 7379100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "pesquiso por \"Python\" PO",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Python",
+                  "offset": 14
+                }
+              ],
+              "location": "comprarCursoPO.pesquisoPorPO(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 155100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "visualizo a lista de resultados para \"Python\" PO",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Python",
+                  "offset": 38
+                }
+              ],
+              "location": "comprarCursoPO.visualizoAListaDeResultadosParaPO(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 252400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "clico em matricule-se PO",
+            "match": {
+              "location": "comprarCursoPO.clicoEmMatriculeSePO()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 880600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "confirmo o nome como \"Python\" e o preco de \"R$ 27,90\" PO",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Python",
+                  "offset": 22
+                },
+                {
+                  "val": "R$ 27,90",
+                  "offset": 44
+                }
+              ],
+              "location": "comprarCursoPO.confirmoONomeComoEOPrecoDePO(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Comprar Curso PO",
+    "description": "",
+    "id": "comprar-curso-po",
+    "keyword": "Feature",
+    "uri": "comprarCursoPO.feature"
+  }
+]
