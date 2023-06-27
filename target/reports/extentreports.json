@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2203933600,
+              "duration": 2840456800,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 707205000,
+              "duration": 972525800,
               "status": "passed"
             },
             "match": {
@@ -34,8 +34,9 @@
         "steps": [
           {
             "result": {
-              "duration": 105965800,
-              "status": "passed"
+              "duration": 157821600,
+              "error_message": "java.lang.NullPointerException\r\n\tat stepsPO.comprarCursoPO.queAcessoOSiteDaIterasysPO(comprarCursoPO.java:20)\r\n\tat ✽.Given que acesso o site da Iterasys PO(comprarCursoPO.feature:3)\r\n",
+              "status": "failed"
             },
             "line": 3,
             "name": "que acesso o site da Iterasys PO",
@@ -46,8 +47,7 @@
           },
           {
             "result": {
-              "duration": 461300,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 4,
             "name": "clico em cursos PO",
@@ -58,8 +58,7 @@
           },
           {
             "result": {
-              "duration": 7379100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 5,
             "name": "pesquiso por \"Python\" PO",
@@ -76,8 +75,7 @@
           },
           {
             "result": {
-              "duration": 155100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 6,
             "name": "visualizo a lista de resultados para \"Python\" PO",
@@ -94,8 +92,7 @@
           },
           {
             "result": {
-              "duration": 252400,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 7,
             "name": "clico em matricule-se PO",
@@ -106,8 +103,7 @@
           },
           {
             "result": {
-              "duration": 880600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 8,
             "name": "confirmo o nome como \"Python\" e o preco de \"R$ 27,90\" PO",

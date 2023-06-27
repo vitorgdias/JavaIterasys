@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2203933600,
+  "duration": 2840456800,
   "status": "passed"
 });
 formatter.scenario({
@@ -52,15 +52,15 @@ formatter.match({
   "location": "comprarCursoPO.queAcessoOSiteDaIterasysPO()"
 });
 formatter.result({
-  "duration": 105965800,
-  "status": "passed"
+  "duration": 157821600,
+  "error_message": "java.lang.NullPointerException\r\n\tat stepsPO.comprarCursoPO.queAcessoOSiteDaIterasysPO(comprarCursoPO.java:20)\r\n\tat ✽.Given que acesso o site da Iterasys PO(comprarCursoPO.feature:3)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "comprarCursoPO.clicoEmCursosPO()"
 });
 formatter.result({
-  "duration": 461300,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -72,8 +72,7 @@ formatter.match({
   "location": "comprarCursoPO.pesquisoPorPO(String)"
 });
 formatter.result({
-  "duration": 7379100,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -85,15 +84,13 @@ formatter.match({
   "location": "comprarCursoPO.visualizoAListaDeResultadosParaPO(String)"
 });
 formatter.result({
-  "duration": 155100,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "comprarCursoPO.clicoEmMatriculeSePO()"
 });
 formatter.result({
-  "duration": 252400,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -109,11 +106,10 @@ formatter.match({
   "location": "comprarCursoPO.confirmoONomeComoEOPrecoDePO(String,String)"
 });
 formatter.result({
-  "duration": 880600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
-  "duration": 707205000,
+  "duration": 972525800,
   "status": "passed"
 });
 });
