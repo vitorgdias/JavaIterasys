@@ -44,9 +44,9 @@ public class Calc {
                 desiredCapabilities.setCapability("appPackage", "com.google.android.calculator");
                 desiredCapabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
                 desiredCapabilities.setCapability("ensureWebviewsHavePages", true);
-                desiredCapabilities.setCapability("SAUCE_USERNAME", "Vitorgd");
-                desiredCapabilities.setCapability("SAUCE_ACCESS_KEY", "1758a8a9-f741-4c79-b575-6cfcf7184067");
-                remoteUrl = new URL("https://Vitorgd:1758a8a9-f741-4c79-b575-6cfcf7184067@ondemand.us-west-1.saucelabs.com:443/wd/hub");
+                desiredCapabilities.setCapability("SAUCE_USERNAME", "");
+                desiredCapabilities.setCapability("SAUCE_ACCESS_KEY", "");
+                remoteUrl = new URL("https://username:accesskey@ondemand.us-west-1.saucelabs.com:443/wd/hub");
                 break;
             default:
                 remoteUrl = new URL("https://localhost:4723/wd/hub");
