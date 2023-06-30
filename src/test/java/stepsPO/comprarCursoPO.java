@@ -9,12 +9,17 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import pages.Carrinho;
 import pages.Home;
+import pages.Resultado;
+import static org.testng.Assert.assertEquals;
 
 
 public class comprarCursoPO {
     WebDriver driver;
     Home home;
+    Resultado resultado;
+    Carrinho carrinho;
     @Given("^que acesso o site da Iterasys PO$")
     public void queAcessoOSiteDaIterasysPO() {
         driver.get("https://www.iterasys.com.br");
@@ -44,7 +49,9 @@ public class comprarCursoPO {
     }
 
     @Then("^confirmo o nome como \"([^\"]*)\" e o preco de \"([^\"]*)\" PO$")
-    public void confirmoONomeComoEOPrecoDePO(String arg0, String arg1) {
+    public void confirmoONomeComoEOPrecoDePO(String curso, String preco) {
+        assertEquals(curso, carrinho.lerNomeCurso());
+        assertEquals(preco, carrinho.lerPrecoCurso());
         System.out.println("Passo 6");
 
     }
